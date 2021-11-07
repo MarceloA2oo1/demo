@@ -9,7 +9,7 @@ public interface NotasInterfacesMC {
     
     public List<Map<String, Object>> listar();
     public List<Map<String, Object>> listar(int id);
-    public NotasMC Add(NotasMC nota);
-    public NotasMC Edit(NotasMC nota);
-    public void Delet(int id);
+    public int Add(NotasMC nota);
+    public int Edit(NotasMC nota);
+    public int Delet(int id);
 }

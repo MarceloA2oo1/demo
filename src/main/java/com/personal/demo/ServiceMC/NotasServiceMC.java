@@ -28,21 +28,21 @@ public class NotasServiceMC implements NotasInterfacesMC{
     }
 
     @Override
-    public NotasMC Add(NotasMC nota) {
+    public int Add(NotasMC nota) {
         // TODO Auto-generated method stub
-        return null;
+        return notaDao.Add(nota);
     }
 
     @Override
-    public NotasMC Edit(NotasMC nota) {
+    public int Edit(NotasMC nota) {
         // TODO Auto-generated method stub
-        return null;
+        return notaDao.Edit(nota);
     }
 
     @Override
-    public void Delet(int id) {
+    public int Delet(int id) {
         // TODO Auto-generated method stub
-        
+        return notaDao.Delet(id);
     }
     
 }

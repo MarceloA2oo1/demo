@@ -2,7 +2,9 @@ package com.personal.demo.modeloMC;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Table(name = "notas")
 @Entity
 public class NotasMC {
 

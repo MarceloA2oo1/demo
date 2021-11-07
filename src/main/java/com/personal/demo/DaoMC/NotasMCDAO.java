@@ -29,21 +29,23 @@ public class NotasMCDAO implements NotasInterfacesMC{
     }
 
     @Override
-    public NotasMC Add(NotasMC nota) {
-        // TODO Auto-generated method stub
-        return null;
+    public int Add(NotasMC nota) {
+        String sql = "insert into notas(titulo,descripcion,fecha,usuario)values(?,?,?,?)";
+		return template.update(sql, nota.getTitulo(), nota.getDescripcion(), nota.getFecha(), nota.getUsuario());
     }
 
     @Override
-    public NotasMC Edit(NotasMC nota) {
+    public int Edit(NotasMC nota) {
         // TODO Auto-generated method stub
-        return null;
+        String sql="update notas set titulo=?, descripcion=?, fecha=?, usuario=? where id=?";		
+		return template.update(sql,nota.getTitulo(),nota.getDescripcion(),nota.getFecha(),nota.getUsuario(),nota.getId());
     }
 
     @Override
-    public void Delet(int id) {
+    public int Delet(int id) {
         // TODO Auto-generated method stub
-        
+        String sql="delete from notas where id=?";
+		return template.update(sql,id);
     }
 
 
